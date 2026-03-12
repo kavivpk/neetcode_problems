@@ -24,3 +24,32 @@ class Solution {
         return arr;
     }
 }
+
+3.Max Consecutive Ones
+class Solution {
+    public int findMaxConsecutiveOnes(int[] num) {
+        int count=0;
+        int k=0;
+        int i=0;
+        while(i<num.length){
+            if(num[i]==1){
+                count++;
+                i++;
+                k=Math.max(k,count);
+            }
+            else if(num[i]==0){
+                count=0;
+                i++;
+            }
+        }
+        return k;
+    }
+
+3.Length Of Last Word
+class Solution {
+    public int lengthOfLastWord(String s) {
+String  []k=s.trim().split(" ");
+return k[k.length-1].length();
+    }
+}
+}
